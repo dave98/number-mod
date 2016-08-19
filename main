@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x1, x2, x3, mo; // variables a usar
+    char sign;
+
+    cout<<"Ingresa el modulo: ";
+    cin>>mo;
+    cout<<"Ingresa el primer numero: ";
+    cin>>x1;
+    cout<<"Ingresa el segundo numero: ";
+    cin>>x2;
+    cout<<"Que operacion desea realizar(+,-,/): ";
+    cin>>sign;
+
+switch(sign){
+case '+':
+    x3= x1 + x2;
+    x3 = x3 % mo;
+    cout<<"El resultado es: "<<x1<<" mod "<<mo<<" + "<<x2<<" mod "<<mo<<" = "<<x3<<" mod "<< mo<<endl;
+    break;
+
+
+case '-':
+    x3 = x1 - x2;
+    if(x3 < 0)x3 = x3 * -1;
+    x3 = x3 % mo;
+    cout<<"El resultado es: "<<x1<<" mod "<<mo<<" - "<<x2<<" mod "<<mo<<" = "<<x3<<" mod "<< mo<<endl;
+    break;
+
+case '*':
+    x3= x1 * x2;
+    x3 = x3 % mo;
+    cout<<"El resultado es: "<<x1<<" mod "<<mo<<" * "<<x2<<" mod "<<mo<<" = "<<x3<<" mod "<< mo<<endl;
+    break;
+
+}
+
+    return 0;
+}
